@@ -7,7 +7,7 @@
         <title>Darevis</title>
     </head>
     <body>
-        <div class="container">
+        <div class="content">
             @yield("content")
         </div>
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
