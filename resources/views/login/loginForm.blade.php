@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row d-flex flex-row justify-content-center">
             <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mt-3">
-                <div class="card px-5 pb-3">
-                    <div class="card-body">
-                        <div class="d-flex flex-row justify-content-center my-3">
+                <div class="card pb-3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="my-3">
                             <h1 class="text-primary fs-1">Login</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="" method="POST" class="col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-9">
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-bold">Email Address</label>
@@ -28,8 +28,9 @@
                                     <p class="text-secondary px-3 py-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-5 d-grid">
+                            <div class="mb-3 d-grid">
                                 <button type="submit" class="btn btn-primary text-uppercase fw-bold">Sign In</button>
+                                <a href="#" class="text-center text-decoration-none mt-4">Create Account</a>
                             </div>
                         </form>
                     </div>
