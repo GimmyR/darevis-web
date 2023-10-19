@@ -23,4 +23,4 @@ Route::prefix("/login")->name("login.")->controller(LoginController::class)->gro
 
     Route::post("/", "doLogin");
 
-}); Route::get("/logout", [LoginController::class, "doLogout"]);
+}); Route::get("/logout", [LoginController::class, "doLogout"])->name("logout");
