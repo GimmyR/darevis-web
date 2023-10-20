@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class RecordController extends Controller
 {
     public function show() {
 
-        //return \Inertia\Inertia::render("Record");
+        return Inertia::render("Record");
 
     }
 }

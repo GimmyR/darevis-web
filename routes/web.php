@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RecordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,9 @@ Route::prefix("/login")->name("login.")->controller(LoginController::class)->gro
     Route::post("/", "doLogin");
 
 }); Route::get("/logout", [LoginController::class, "doLogout"])->name("logout");
+
+Route::prefix("/record")->name("record.")->controller(RecordController::class)->group(function() {
+
+    Route::get("/{record}/show", "show")->name("show");
+
+});
