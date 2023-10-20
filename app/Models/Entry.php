@@ -12,4 +12,10 @@ class Entry extends Model
     protected $fillable = [
         "record_id"
     ];
+
+    public function entryDetails() {
+
+        return $this->hasMany(EntryDetail::class);
+
+    }
 }

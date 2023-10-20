@@ -13,4 +13,16 @@ class Record extends Model
         "user_id",
         "title"
     ];
+
+    public function parameters() {
+
+        return $this->hasMany(Parameter::class);
+
+    }
+
+    public function entries() {
+
+        return $this->hasMany(Entry::class);
+
+    }
 }
