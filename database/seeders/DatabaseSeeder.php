@@ -56,6 +56,10 @@ class DatabaseSeeder extends Seeder
             "record_id" => 1,
             "title" => "Temperature",
             "unit" => "°C"
+        ]);
+
+        $this->call([
+            EntrySeeder::class
         ]);*/
         
     }
