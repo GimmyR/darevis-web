@@ -8,9 +8,16 @@ use Inertia\Inertia;
 
 class RecordController extends Controller
 {
-    public function show(Record $record) {
+    public function show(string $id) {
 
-        return Inertia::render("Record");
+        $record = Record::where("id", $id)->with([ 
+                                                "parameters", 
+                                                "entries.entryDetails" 
+                                            ])->first();
+
+        return Inertia::render("Record", [
+            "record" => $record
+        ]);
 
     }
 }
