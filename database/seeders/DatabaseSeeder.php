@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Parameter;
 use App\Models\Record;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,36 @@ class DatabaseSeeder extends Seeder
         Record::create([
             "user_id" => 1,
             "title" => "My Health"
+        ]);
+
+        Parameter::create([
+            "record_id" => 1,
+            "title" => "Sys",
+            "unit" => "mmHg"
+        ]);
+
+        Parameter::create([
+            "record_id" => 1,
+            "title" => "Dia",
+            "unit" => "mmHg"
+        ]);
+
+        Parameter::create([
+            "record_id" => 1,
+            "title" => "Pulse",
+            "unit" => "/min"
+        ]);
+
+        Parameter::create([
+            "record_id" => 1,
+            "title" => "Weight",
+            "unit" => "kg"
+        ]);
+
+        Parameter::create([
+            "record_id" => 1,
+            "title" => "Temperature",
+            "unit" => "°C"
         ]);*/
         
     }
