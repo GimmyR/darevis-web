@@ -17,7 +17,7 @@
                         <tr>
                             <th>{{ $record->id }}</th>
                             <td>
-                                <a href="#" class="text-decoration-none">{{ $record->title }}</a>
+                                <a href="{{ route("record.show", [ "record" => $record->id ]) }}" class="text-decoration-none">{{ $record->title }}</a>
                             </td>
                             <td>{{ $record->created_at->format("d M y - h:i") }}</td>
                         </tr>
