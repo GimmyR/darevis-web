@@ -1,9 +1,9 @@
 <script setup>
-
+    import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-    <p>RECORD IS HERE !</p>
+    <Navbar/>
 </template>
 
 <style>

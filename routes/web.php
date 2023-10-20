@@ -28,6 +28,6 @@ Route::prefix("/login")->name("login.")->controller(LoginController::class)->gro
 
 Route::prefix("/record")->name("record.")->controller(RecordController::class)->group(function() {
 
-    Route::get("/{record}/show", "show")->name("show");
+    Route::get("/{record}/show", "show")->name("show")->middleware("auth");
 
 });
