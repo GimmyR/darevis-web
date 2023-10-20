@@ -17,7 +17,7 @@
             <a href="#" class="text-light text-decoration-none me-2">
                 <i class="bi bi-plus-circle fs-4"></i>
             </a>
-            <a href="#" class="text-light text-decoration-none">
+            <a href="/logout" class="text-light text-decoration-none">
                 <i class="bi bi-person-circle fs-4"></i>
             </a>
         </div>
