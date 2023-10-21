@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void {
 
-        /*User::create([
+        User::create([
             "name" => "gimmyraz",
             "email" => "gimmyarazafimbelo2@gmail.com",
             "password" => Hash::make("mdpGimmy")
@@ -28,39 +28,10 @@ class DatabaseSeeder extends Seeder
             "title" => "My Health"
         ]);
 
-        Parameter::create([
-            "record_id" => 1,
-            "title" => "Sys",
-            "unit" => "mmHg"
-        ]);
-
-        Parameter::create([
-            "record_id" => 1,
-            "title" => "Dia",
-            "unit" => "mmHg"
-        ]);
-
-        Parameter::create([
-            "record_id" => 1,
-            "title" => "Pulse",
-            "unit" => "/min"
-        ]);
-
-        Parameter::create([
-            "record_id" => 1,
-            "title" => "Weight",
-            "unit" => "kg"
-        ]);
-
-        Parameter::create([
-            "record_id" => 1,
-            "title" => "Temperature",
-            "unit" => "°C"
-        ]);
-
         $this->call([
+            ParameterSeeder::class,
             EntrySeeder::class
-        ]);*/
+        ]);
         
     }
 }
