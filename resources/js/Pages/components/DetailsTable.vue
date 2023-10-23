@@ -14,7 +14,7 @@
         <tbody>
             <tr v-for="entry in record.entries">
                 <td v-for="detail in entry.entry_details">{{ detail.value }}</td>
-                <td><a :href="'/entry/' + entry.id + '/edit'">Edit</a></td>
+                <td><a :href="'/edit-entry/' + entry.id">Edit</a></td>
             </tr>
         </tbody>
     </table>
