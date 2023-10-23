@@ -33,11 +33,13 @@ class AddEntryController extends Controller
 
             $inputs = $request->all();
             
-            if($this->validateEntry($inputs)) {
+            if($this->validateEntry($inputs["details"])) {
 
                 /** @var Entry $entry */
-                $entry = $record->entries()->create([]);
-                $entry->entryDetails()->createMany($inputs);
+                $entry = $record->entries()->create([
+                    "created_at" => $inputs["created_at"],
+                    "updated_at" => $inputs["created_at"]
+                ]); $entry->entryDetails()->createMany($inputs["details"]);
                 
                 return redirect()->route("record.show", [
                     "id" => $recordId
