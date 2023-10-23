@@ -10,7 +10,9 @@ class Entry extends Model
     use HasFactory;
 
     protected $fillable = [
-        "record_id"
+        "record_id",
+        "created_at",
+        "updated_at"
     ];
 
     public function entryDetails() {
