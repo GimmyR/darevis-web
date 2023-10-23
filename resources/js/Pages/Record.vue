@@ -1,18 +1,19 @@
 <script setup>
-    import Navbar from './components/Navbar.vue';
-    import DetailsTable from './components/DetailsTable.vue';
-    import DetailsCharts from './components/DetailsCharts.vue';
+import Navbar from './components/Navbar.vue';
+import DetailsTable from './components/DetailsTable.vue';
+import DetailsCharts from './components/DetailsCharts.vue';
+import { Link } from '@inertiajs/vue3';
 
-    defineProps({ record: Object });
+defineProps({ record: Object });
 </script>
 
 <template>
     <Navbar/>
     <div class="container d-flex flex-column align-items-center">
         <div class="d-flex flex-row align-items-center">
-            <a href="#" title="Add Entry">
+            <Link :href="'/add-entry/' + record.id" title="Add Entry">
                 <i class="bi bi-plus-circle fs-3 me-3"></i>
-            </a>
+            </Link>
             <h1 class="mt-5 mb-5 me-3">{{ record.title }}</h1>
             <a href="#">
                 <i class="bi bi-pencil-square fs-3"></i>
