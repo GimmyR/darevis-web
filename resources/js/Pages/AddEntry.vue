@@ -35,7 +35,7 @@ const handleSubmit = function() {
     <Navbar/>
     <div class="container d-flex flex-column align-items-center">
         <h1 class="mt-5 mb-5">{{ record.title }}</h1>
-        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-8">
             <form @submit.prevent="handleSubmit">
                 <div class="mb-3">
                     <label class="form-label fw-bold">Creation date</label>
