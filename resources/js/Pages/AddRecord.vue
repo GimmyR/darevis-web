@@ -11,7 +11,7 @@ const add0b = function(nb) {
 };
 
 const getDatetime = function(datetime) {
-    return datetime.getFullYear() + "-" + add0b(datetime.getMonth()) + "-" + add0b(datetime.getDate()) + "T" + add0b(datetime.getHours()) + ":" + add0b(datetime.getMinutes());
+    return datetime.getFullYear() + "-" + add0b(datetime.getMonth() + 1) + "-" + add0b(datetime.getDate()) + "T" + add0b(datetime.getHours()) + ":" + add0b(datetime.getMinutes());
 };
 
 const form = useForm({
