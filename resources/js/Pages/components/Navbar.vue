@@ -1,13 +1,23 @@
 <script setup>
+import { useForm } from '@inertiajs/vue3';
+
 const props = defineProps({ user: Object });
+
+const form = useForm({
+    search: null
+});
+
+const handleSubmit = function() {
+    form.post("/search");
+};
 </script>
 
 <template>
     <div class="container-fluid bg-primary d-flex flex-row justify-content-between align-items-center custom-navbar">
         <a href="/" class="text-light text-decoration-none fw-bold fs-3">Darevis</a>
-        <form class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+        <form @submit.prevent="handleSubmit" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search"/>
+                <input type="text" class="form-control" v-model="form.search" placeholder="Search"/>
                 <button type="submit" class="btn btn-outline-light">
                     <i class="bi bi-search"></i>
                 </button>

@@ -19,7 +19,7 @@
                             <td>
                                 <a href="{{ route("record.show", [ "id" => $record->id ]) }}" class="text-decoration-none">{{ $record->title }}</a>
                             </td>
-                            <td>{{ $record->created_at->format("d M y - h:i") }}</td>
+                            <td>{{ $record->created_at->format("d/m/Y h:i") }}</td>
                         </tr>
                     @endforeach
                 </tbody>
