@@ -15,7 +15,7 @@ defineProps({ record: Object });
                 <i class="bi bi-plus-circle fs-3 me-3"></i>
             </Link>
             <h1 class="mt-5 mb-5 me-3">{{ record.title }}</h1>
-            <a href="#">
+            <a :href="'/edit-record/' + record.id">
                 <i class="bi bi-pencil-square fs-3"></i>
             </a>
         </div>
