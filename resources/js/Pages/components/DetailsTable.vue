@@ -9,6 +9,7 @@
                 <th scope="row" v-for="parameter in record.parameters">
                     {{ parameter.title }}<span v-if="parameter.unit != null"> ({{ parameter.unit }})</span>
                 </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
