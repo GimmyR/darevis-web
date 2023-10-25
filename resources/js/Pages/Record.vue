@@ -4,11 +4,11 @@ import DetailsTable from './components/DetailsTable.vue';
 import DetailsCharts from './components/DetailsCharts.vue';
 import { Link } from '@inertiajs/vue3';
 
-defineProps({ record: Object });
+defineProps({ user: Object, record: Object });
 </script>
 
 <template>
-    <Navbar/>
+    <Navbar :user="user"/>
     <div class="container d-flex flex-column align-items-center">
         <div class="d-flex flex-row align-items-center">
             <Link :href="'/add-entry/' + record.id" title="Add Entry">

@@ -1,5 +1,5 @@
 <script setup>
-
+const props = defineProps({ user: Object });
 </script>
 
 <template>
@@ -13,13 +13,23 @@
                 </button>
             </div>
         </form>
-        <div>
-            <a href="/add-record" class="text-light text-decoration-none me-2">
-                <i class="bi bi-plus-circle fs-4"></i>
-            </a>
-            <a href="/logout" class="text-light text-decoration-none">
-                <i class="bi bi-person-circle fs-4"></i>
-            </a>
+        <div class="d-flex flex-row">
+            <div>
+                <a href="/add-record" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-plus-circle fs-4"></i>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="text-light text-decoration-none" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle fs-4"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item text-center text-primary">{{ user.name }}</li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-center" href="#">Settings</a></li>
+                    <li><a class="dropdown-item text-center text-danger" href="/logout">Log out</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
