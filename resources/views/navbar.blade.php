@@ -9,7 +9,7 @@
         </div>
     </form>
     <div>
-        <a href="#" class="text-light text-decoration-none me-2">
+        <a href="{{ route("add_record.form") }}" class="text-light text-decoration-none me-2">
             <i class="bi bi-plus-circle fs-4"></i>
         </a>
         <a href="{{ route("logout") }}" class="text-light text-decoration-none">

@@ -14,7 +14,7 @@
             </div>
         </form>
         <div>
-            <a href="#" class="text-light text-decoration-none me-2">
+            <a href="/add-record" class="text-light text-decoration-none me-2">
                 <i class="bi bi-plus-circle fs-4"></i>
             </a>
             <a href="/logout" class="text-light text-decoration-none">
