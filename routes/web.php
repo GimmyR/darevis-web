@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddEntryController;
 use App\Http\Controllers\AddRecordController;
 use App\Http\Controllers\EditEntryController;
+use App\Http\Controllers\EditRecordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RecordController;
@@ -56,5 +57,13 @@ Route::prefix("/add-record")->name("add_record.")->controller(AddRecordControlle
     Route::get("/", "addRecord")->name("form")->middleware("auth");
 
     Route::post("/", "doAddRecord")->middleware('auth');
+
+});
+
+Route::prefix("/edit-record")->name("edit_record.")->controller(EditRecordController::class)->group(function() {
+
+    Route::get("/{id}", "editRecord")->name("form")->middleware("auth");
+
+    Route::post("/{id}", "doEditRecord")->middleware('auth');
 
 });
