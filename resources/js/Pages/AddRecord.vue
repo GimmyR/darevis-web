@@ -22,6 +22,10 @@ const addParameter = function() {
     form.parameters.push({ title: null, unit: null });
 };
 
+const removeParameter = function(index) {
+    form.parameters.splice(index, 1);
+};
+
 const handleSubmit = function() {
     form.post("/add-record");
 };
@@ -43,13 +47,18 @@ const handleSubmit = function() {
                 </div>
                 <div class="mt-4 mb-3">
                     <div v-for="(parameter, index) in form.parameters" class="mb-3 d-flex flex-row">
-                        <div class="col-8 col-sm-8 col-md-10 col-lg-10 col-xl-10 col-xxl-10 pe-3">
+                        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8 col-xxl-9 pe-3">
                             <label class="form-label fw-bold">Parameter Title #{{ index + 1 }}</label>
                             <input type="text" class="form-control" v-model="form.parameters[index].title"/>
                         </div>
-                        <div class="col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                        <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
                             <label class="form-label fw-bold">Parameter Unit #{{ index + 1 }}</label>
                             <input type="text" class="form-control" v-model="form.parameters[index].unit"/>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 col-xxl-1 d-flex flex-row justify-content-end align-items-end">
+                            <button type="button" @click="removeParameter(index)" class="btn btn-warning">
+                                <i class="bi bi-dash-lg"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="d-grid">
