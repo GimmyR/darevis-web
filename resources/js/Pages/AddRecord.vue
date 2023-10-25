@@ -2,6 +2,8 @@
 import { useForm } from '@inertiajs/vue3';
 import Navbar from './components/Navbar.vue';
 
+const props = defineProps({ user: Object });
+
 const add0b = function(nb) {
     if(nb < 10)
         nb = "0" + nb;
@@ -32,7 +34,7 @@ const handleSubmit = function() {
 </script>
 
 <template>
-    <Navbar/>
+    <Navbar :user="user"/>
     <div class="container d-flex flex-column align-items-center">
         <h1 class="mt-5 mb-5">Create Record</h1>
         <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">

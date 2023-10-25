@@ -25,6 +25,7 @@ class EditRecordController extends Controller
 
             if($record->user_id == $user->id)
                 return Inertia::render("EditRecord", [
+                    "user" => $user,
                     "record" => $record
                 ]);
 

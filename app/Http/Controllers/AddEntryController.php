@@ -17,6 +17,7 @@ class AddEntryController extends Controller
                             ->first();
 
         return Inertia::render("AddEntry", [
+            "user" => Auth::user(),
             "record" => $record
         ]);
 

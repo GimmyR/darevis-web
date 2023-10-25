@@ -22,6 +22,7 @@ class EditEntryController extends Controller
 
         if($record->user_id == $user->id)
             return Inertia::render("EditEntry", [
+                "user" => $user,
                 "record" => $record,
                 "parameters" => $record->parameters,
                 "entry" => $entry,

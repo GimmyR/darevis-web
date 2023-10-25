@@ -13,7 +13,9 @@ class AddRecordController extends Controller
 {
     public function addRecord(): Response {
 
-        return Inertia::render("AddRecord");
+        return Inertia::render("AddRecord", [
+            "user" => Auth::user()
+        ]);
 
     }
 
