@@ -11,7 +11,8 @@ class Record extends Model
 
     protected $fillable = [
         "user_id",
-        "title"
+        "title",
+        "created_at"
     ];
 
     public function parameters() {
