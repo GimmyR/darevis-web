@@ -17,6 +17,7 @@ class HomeController extends Controller
         $records = Record::where("user_id", $user->id)->get();
 
         return view("home", [
+            "user" => $user,
             "records" => $records
         ]);
 
