@@ -8,13 +8,33 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-1c65f328.js",
+    "file": "assets/app-afb1daab.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/appv.css": {
+    "file": "assets/appv-dd1d4fcc.css",
+    "src": "resources/js/appv.css"
+  },
+  "resources/js/appv.js": {
+    "css": [
+      "assets/appv-dd1d4fcc.css"
+    ],
+    "file": "assets/appv-517c01c3.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/appv.js"
   },
   "resources/scss/app.scss": {
     "file": "assets/app-01a338b6.css",
     "isEntry": true,
     "src": "resources/scss/app.scss"
+  },
+  "resources/scss/appv.scss": {
+    "file": "assets/appv-ee6215e5.css",
+    "isEntry": true,
+    "src": "resources/scss/appv.scss"
   }
 }
