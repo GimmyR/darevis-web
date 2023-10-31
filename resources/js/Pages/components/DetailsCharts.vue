@@ -4,12 +4,12 @@
 
     ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip);
 
-    const props = defineProps({ record: Object });
+    const props = defineProps({ parameters: Array, entries: Array });
 
     const getLabels = function() {
         let labels = [];
 
-        props.record.entries.forEach(entry => {
+        props.entries.forEach(entry => {
             let d = new Date(entry.created_at);
             labels.push(d.toLocaleDateString());
         });
@@ -20,7 +20,7 @@
     const getDetails = function(parameter) {
         let details = [];
 
-        props.record.entries.forEach(entry => {
+        props.entries.forEach(entry => {
             entry.entry_details.forEach(detail => {
                 if(detail.parameter_id == parameter.id)
                     details.push(detail.value);
@@ -49,7 +49,7 @@
 </script>
 
 <template>
-    <div v-for="parameter in record.parameters" class="mb-5">
+    <div v-for="parameter in parameters" class="mb-5">
         <div>
             <h2 class="fs-5">{{ parameter.title }}</h2>
         </div>

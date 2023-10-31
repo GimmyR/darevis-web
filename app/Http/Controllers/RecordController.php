@@ -11,14 +11,16 @@ class RecordController extends Controller
 {
     public function show(string $id) {
 
-        $record = Record::where("id", $id)->with([ 
-                                                "parameters", 
-                                                "entries.entryDetails" 
-                                            ])->first();
+        /** @var Record $record */
+        $record = Record::where("id", $id)->first();
+        $parameters = $record->parameters()->orderBy("id")->get();
+        $entries = $record->entries()->with("entryDetails")->orderBy("created_at")->get();
 
         return Inertia::render("Record", [
             "user" => Auth::user(),
-            "record" => $record
+            "record" => $record,
+            "parameters" => $parameters,
+            "entries" => $entries
         ]);
 
     }

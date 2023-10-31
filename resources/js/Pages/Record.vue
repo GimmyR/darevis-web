@@ -4,7 +4,7 @@ import DetailsTable from './components/DetailsTable.vue';
 import DetailsCharts from './components/DetailsCharts.vue';
 import { Link } from '@inertiajs/vue3';
 
-defineProps({ user: Object, record: Object });
+defineProps({ user: Object, record: Object, parameters: Array, entries: Array });
 </script>
 
 <template>
@@ -20,10 +20,10 @@ defineProps({ user: Object, record: Object });
             </a>
         </div>
         <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-8 mb-5">
-            <DetailsCharts :record="record"/>
+            <DetailsCharts :parameters="parameters" :entries="entries"/>
         </div>
         <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-8">
-            <DetailsTable :record="record"/>
+            <DetailsTable :parameters="parameters" :entries="entries"/>
         </div>
     </div>
 </template>
