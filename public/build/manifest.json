@@ -13,14 +13,14 @@
     "src": "resources/js/app.js"
   },
   "resources/js/appv.css": {
-    "file": "assets/appv-dd1d4fcc.css",
+    "file": "assets/appv-25af7589.css",
     "src": "resources/js/appv.css"
   },
   "resources/js/appv.js": {
     "css": [
-      "assets/appv-dd1d4fcc.css"
+      "assets/appv-25af7589.css"
     ],
-    "file": "assets/appv-517c01c3.js",
+    "file": "assets/appv-deb2cdda.js",
     "imports": [
       "resources/js/app.js"
     ],
